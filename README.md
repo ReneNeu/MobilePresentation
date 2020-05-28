@@ -13,6 +13,15 @@ The following are use cases and it's sensor usage from our daily life.
 |auto brightness| lightt sensor  |
 | VR (Google Cardboard)| gyroscope, magnetic  sensor, orientation  |
 
+## Technichal Background
+
+TODO
+
+## Our APP
+
+If you want to try our app you just have to go to our project in AndroidStudio Clone and go to the Main (https://github.com/ReneNeu/MobilePresentation/blob/27a8ca7d275316000234c42b41d2ac6369d3b0d8/app/src/main/java/com/example/mobileambienttemperature/MainActivity.kt). Then you have to execute it
+
+
 ## Summary
 
 New sensore are not always a good thing. For example the new radar based Soli sensor in Googles Pixel 4 is not living up to it's true potential. The capability are limited by Googles implementation.
