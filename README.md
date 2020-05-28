@@ -13,6 +13,30 @@ The following are use cases and it's sensor usage from our daily life.
 |auto brightness| lightt sensor  |
 | VR (Google Cardboard)| gyroscope, magnetic  sensor, orientation  |
 
+## Sensors
+
+Android has up to 13. Standard Sensors in one device
+
+|Sensor |Description  |
+|--|--|
+|Accelerometer  |Measures the acceleration force in m/s2  |
+|Ambient Temperature  |Measures the ambient room temperature in degrees Celsius (°C)  |
+|Gravity  |Measures the force of gravity in m/s2 that is applied to a device on all three physical axes (x, y, z)  |
+|Gyroscope  |Measures a device's rate of rotation in rad/s around each of the three physical axes (x, y, and z)  |
+|Light  |Measures the ambient light level (illumination) in lx  |
+|Linear Acceleration  |Measures the acceleration force in m/s2 that is applied to a device on all three physical axes (x, y, and z)  |
+|Magnetic Field  |Measures the ambient geomagnetic field for all three physical axes  |
+|Orientation  |Measures degrees of rotation that a device makes around all three physical axes (x, y, z)  |
+|Pressure  |Measures the ambient air pressure in hPa or mbar  |
+|Proximity  |Measures the proximity of an object in cm relative to the view screen of a device  |
+|Relative Humidity  |Measures the relative ambient humidity in percent (%)  |
+|Rotation Vector  |Measures the orientation of a device by providing the three elements of the device's rotation vector  |
+|Temperature  |Measures the temperature of the device in degrees Celsius (°C)  |
+
+
+
+
+
 ## Technichal background
 
 TODO
