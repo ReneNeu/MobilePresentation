@@ -45,7 +45,7 @@ class MainActivity : AppCompatActivity() , SensorEventListener {
         } else if (event.sensor.type == Sensor.TYPE_LIGHT) {
             val lightValue = event.values[0]
             val image = findViewById<ImageView>(R.id.imageView3)
-            findViewById<TextView>(R.id.output_rotation).text = lightValue.toString()
+            findViewById<TextView>(R.id.output_light).text = lightValue.toString()
             var test = lightValue / 4
             test /= 10000
             image.animate().alpha(test).setDuration(0)
