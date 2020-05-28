@@ -58,4 +58,4 @@ On the other hand, already implemented sensors like the proximity sensors are he
 They make our life so much easier and improve the smartphone usage in a substanial way.
 Furthermore future smartphones are going to have even more sensors implemented. Just imagine the development of dual screen or folding smarphones. There could be a sensor measuring how much the smartphones opens up. This information could be use to render the display content accordingly.  
 
-"We are just at the beginning of smartphone development"
+**"We are just at the beginning of smartphone development"**
