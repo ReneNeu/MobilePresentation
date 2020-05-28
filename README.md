@@ -47,7 +47,7 @@ A SensorEvent object contains information about the new sensor data, including
 
 ## Our Application
 
-If you want to try our app you just have to go to our project in AndroidStudio Clone and go to the Main (https://github.com/ReneNeu/MobilePresentation/blob/27a8ca7d275316000234c42b41d2ac6369d3b0d8/app/src/main/java/com/example/mobileambienttemperature/MainActivity.kt). Then you have to execute it
+If you want to try our app you just have to go to our project in AndroidStudio Clone and go to the Main (https://github.com/ReneNeu/MobilePresentation/blob/27a8ca7d275316000234c42b41d2ac6369d3b0d8/app/src/main/java/com/example/mobileambienttemperature/MainActivity.kt) to execute it.
 
 
 ## Summary
