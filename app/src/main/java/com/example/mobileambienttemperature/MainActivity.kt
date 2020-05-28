@@ -20,18 +20,9 @@ class MainActivity : AppCompatActivity() , SensorEventListener {
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-
-        // Get an instance of the sensor service, and use that to get an instance of
-        // a particular sensor.
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
-
-
         temperatureSensor = sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE)
         light = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)
-
-
-        //image.animate().rotation(rotationY).alpha(0.5F).setDuration(0)
     }
 
     override fun onAccuracyChanged(sensor: Sensor, accuracy: Int) {
@@ -44,8 +35,8 @@ class MainActivity : AppCompatActivity() , SensorEventListener {
             findViewById<TextView>(R.id.temperature_output).text = ambient_temperature.toString() + " °C"
         } else if (event.sensor.type == Sensor.TYPE_LIGHT) {
             val lightValue = event.values[0]
-            val image = findViewById<ImageView>(R.id.imageView3)
-            findViewById<TextView>(R.id.output_light).text = lightValue.toString()
+            val image = findViewById<ImageView>(R.id.imageLogo)
+            findViewById<TextView>(R.id.output_light).text = lightValue.toString() + " lx"
             var test = lightValue / 4
             test /= 10000
             image.animate().alpha(test).setDuration(0)
