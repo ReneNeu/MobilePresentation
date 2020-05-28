@@ -47,7 +47,7 @@ A SensorEvent object contains information about the new sensor data, including
 
 ## Our Application
 
-If you want to try our app you have to clone this Git repository and run MainActivity.kt in Android Studio.
+If you want to try our app you have to clone this Git repository and run MainActivity.kt in Android Studio.  
 Clone: https://github.com/ReneNeu/MobilePresentation.git
 
 
