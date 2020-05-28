@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">MobileAmbientTemperature</string>
+    <string name="app_name">Mobile Application</string>
+    <string name="main_title">SENSORS</string>
+    <string name="main_subtitle">in Android</string>
+
+    <string name="temperature">Temperature: </string>
+    <string name="temperature_output">OUTPUT</string>
 </resources>
