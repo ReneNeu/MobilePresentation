@@ -37,9 +37,9 @@ class MainActivity : AppCompatActivity() , SensorEventListener {
             val lightValue = event.values[0]
             val image = findViewById<ImageView>(R.id.imageLogo)
             findViewById<TextView>(R.id.output_light).text = lightValue.toString() + " lx"
-            var test = lightValue / 4
-            test /= 10000
-            image.animate().alpha(test).setDuration(0)
+            var lightCalculate = lightValue / 4
+            lightCalculate /= 10000
+            image.animate().alpha(lightCalculate).setDuration(0)
         }
     }
 
