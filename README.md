@@ -2,7 +2,7 @@
 by Rene Neuhaus, Thomas Wagner
 ## Motivation
 
-Sensors in android are there to make your life a little easier. Most of the time those sensore are unnoticed.
+Sensors in android are there to make your life a little easier. Most of the time those sensore are unnoticed.  
 The following are use cases and it's sensor usage from our daily life.
 
 |use case  |main sensor involved  |
@@ -15,7 +15,7 @@ The following are use cases and it's sensor usage from our daily life.
 
 ## Sensors
 
-Android has up to 13. Standard Sensors in one device
+Android has up to 13 default sensors in one device
 
 |Sensor |Description  |
 |--|--|
@@ -47,13 +47,15 @@ A SensorEvent object contains information about the new sensor data, including
 
 ## Our Application
 
-If you want to try our app you just have to go to our project in AndroidStudio Clone and go to the Main (https://github.com/ReneNeu/MobilePresentation/blob/27a8ca7d275316000234c42b41d2ac6369d3b0d8/app/src/main/java/com/example/mobileambienttemperature/MainActivity.kt) to execute it.
+If you want to try our app you have to clone this Git repository and run MainActivity.kt in Android Studio.  
+Clone: https://github.com/ReneNeu/MobilePresentation.git
 
 
 ## Summary
 
-New sensors are not always a good thing. For example the new radar based Soli sensor in Googles Pixel 4 is not living up to it's true potential. The capability are limited by Googles implementation.
+New sensors are not always a good thing. For example the new radar based Soli sensor in Googles Pixel 4 is not living up to it's true potential. The capability are limited by Googles implementation.   
 On the other hand, already implemented sensors like the proximity sensors are here to stay. 
 They make our life so much easier and improve the smartphone usage in a substanial way.
-Furthermore future smartphones are going to have even more sensors implemented. Just imagine the development of dual screen or folding smarphones. There could be a sensor measuring how much the smartphones opens up. This information could be use to render the display content accordingly.
-"We are just at the beginning of smartphone development"
+Furthermore future smartphones are going to have even more sensors implemented. Just imagine the development of dual screen or folding smarphones. There could be a sensor measuring how much the smartphones opens up. This information could be use to render the display content accordingly.  
+
+**"We are just at the beginning of smartphone development"**
