@@ -33,13 +33,17 @@ Android has up to 13. Standard Sensors in one device
 |Rotation Vector  |Measures the orientation of a device by providing the three elements of the device's rotation vector  |
 |Temperature  |Measures the temperature of the device in degrees Celsius (°C)  |
 
-
-
-
-
 ## Technichal background
 
-TODO
+The sensor framework offers us a variety of possibilities how we can access sensors during runtime. To work with it we first need a reference to these sensors. This is done for us by the sensor manager.
+With it we can perform a variety of tasks and thus e.g. generate a list of possible sensors. Much more important, however, is of course the work with the sensors. For this we have to over-write two functions.
+- onAccuracyChanged(): 
+In this case the system invokes the onAccuracyChanged() method, providing you with a reference to the Sensor object that changed and the new accuracy of the sensor.
+
+-  onSensorChanged():
+In this case the system invokes the onSensorChanged() method, providing you with a SensorEvent object.
+A SensorEvent object contains information about the new sensor data, including: the accuracy of the data, the sensor that generated the data, the timestamp at which the data was generated, and the new data that the sensor recorded.
+
 
 ## Our Application
 
@@ -48,7 +52,7 @@ If you want to try our app you just have to go to our project in AndroidStudio C
 
 ## Summary
 
-New sensore are not always a good thing. For example the new radar based Soli sensor in Googles Pixel 4 is not living up to it's true potential. The capability are limited by Googles implementation.
+New sensors are not always a good thing. For example the new radar based Soli sensor in Googles Pixel 4 is not living up to it's true potential. The capability are limited by Googles implementation.
 On the other hand, already implemented sensors like the proximity sensors are here to stay. 
 They make our life so much easier and improve the smartphone usage in a substanial way.
 Furthermore future smartphones are going to have even more sensors implemented. Just imagine the development of dual screen or folding smarphones. There could be a sensor measuring how much the smartphones opens up. This information could be use to render the display content accordingly.
