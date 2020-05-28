@@ -5,17 +5,18 @@ import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
-import android.os.Build
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+
 
 class MainActivity : AppCompatActivity() , SensorEventListener {
     private lateinit var sensorManager: SensorManager
 
     private var temperatureSensor: Sensor? = null
     private var light: Sensor? = null
+    private var rotationVectorSensor: Sensor? = null
 
     public override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +24,7 @@ class MainActivity : AppCompatActivity() , SensorEventListener {
         sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
         temperatureSensor = sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE)
         light = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT)
+        rotationVectorSensor = sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR)
     }
 
     override fun onAccuracyChanged(sensor: Sensor, accuracy: Int) {
@@ -40,6 +42,28 @@ class MainActivity : AppCompatActivity() , SensorEventListener {
             var lightCalculate = lightValue / 4
             lightCalculate /= 10000
             image.animate().alpha(lightCalculate).setDuration(0)
+        } else if (event.sensor.type == Sensor.TYPE_ROTATION_VECTOR) {
+            val rotationMatrix = FloatArray(16)
+            SensorManager.getRotationMatrixFromVector(
+                rotationMatrix, event.values
+            )
+            val remappedRotationMatrix = FloatArray(16)
+            SensorManager.remapCoordinateSystem(
+                rotationMatrix,
+                SensorManager.AXIS_X,
+                SensorManager.AXIS_Z,
+                remappedRotationMatrix
+            )
+            val orientations = FloatArray(3)
+            SensorManager.getOrientation(remappedRotationMatrix, orientations)
+
+            for (i in 0..2) {
+                orientations[i] =
+                    Math.toDegrees(orientations[i].toDouble()).toFloat()
+            }
+            val image = findViewById<ImageView>(R.id.imageLogo)
+            image.animate().rotation(orientations[2]).setDuration(0)
+            findViewById<TextView>(R.id.output_degree).text = orientations[2].toString() + " °"
         }
     }
 
@@ -48,6 +72,7 @@ class MainActivity : AppCompatActivity() , SensorEventListener {
         super.onResume()
         sensorManager.registerListener(this, temperatureSensor, SensorManager.SENSOR_DELAY_NORMAL)
         sensorManager.registerListener(this, light, SensorManager.SENSOR_DELAY_NORMAL)
+        sensorManager.registerListener(this, rotationVectorSensor, SensorManager.SENSOR_DELAY_FASTEST)
     }
 
     override fun onPause() {
